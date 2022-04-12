@@ -1,0 +1,99 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+local Library = {}
+
+function Library:CreateMain()
+    local ScreenGui = Instance.new("ScreenGui")
+    local MainHeaderFrame = Instance.new("Frame")
+    local UICorner = Instance.new("UICorner")
+    local TextLabel = Instance.new("TextLabel")
+    local InsideFrame = Instance.new("Frame")
+    local UICorner_2 = Instance.new("UICorner")
+    local SharpHeaderAccent = Instance.new("Frame")
+    local Frame = Instance.new("Frame")
+    local UIListLayout = Instance.new("UIListLayout")
+    local TextButton = Instance.new("TextButton")
+    local UICorner_3 = Instance.new("UICorner")
+    local SharpHeaderframe = Instance.new("Frame")
+
+    --Properties:
+
+    ScreenGui.Parent = game:GetService("CoreGui")
+    ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+    MainHeaderFrame.Name = "Main Header Frame."
+    MainHeaderFrame.Parent = ScreenGui
+    MainHeaderFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    MainHeaderFrame.BorderColor3 = Color3.fromRGB(30, 30, 30)
+    MainHeaderFrame.Position = UDim2.new(0.348473579, 0, 0.231378555, 0)
+    MainHeaderFrame.Size = UDim2.new(0, 259, 0, 31)
+    MainHeaderFrame.ZIndex = 5
+
+    UICorner.CornerRadius = UDim.new(0, 5)
+    UICorner.Parent = MainHeaderFrame
+
+    TextLabel.Parent = MainHeaderFrame
+    TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel.BackgroundTransparency = 1.000
+    TextLabel.Position = UDim2.new(0.0231660306, 0, 0.133073375, 0)
+    TextLabel.Size = UDim2.new(0, 166, 0, 21)
+    TextLabel.ZIndex = 555
+    TextLabel.Font = Enum.Font.SourceSans
+    TextLabel.Text = "Dashboard"
+    TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel.TextSize = 16.000
+    TextLabel.TextTransparency = 0.080
+    TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+    TextLabel.TextYAlignment = Enum.TextYAlignment.Bottom
+
+    InsideFrame.Name = "InsideFrame"
+    InsideFrame.Parent = MainHeaderFrame
+    InsideFrame.BackgroundColor3 = Color3.fromRGB(23, 23, 23)
+    InsideFrame.BorderSizePixel = 0
+    InsideFrame.Position = UDim2.new(0, 0, 0.877398252, 0)
+    InsideFrame.Size = UDim2.new(0, 259, 0, 313)
+    InsideFrame.ZIndex = -1
+
+    UICorner_2.CornerRadius = UDim.new(0, 5)
+    UICorner_2.Parent = InsideFrame
+
+    SharpHeaderAccent.Name = "Sharp Header Accent"
+    SharpHeaderAccent.Parent = InsideFrame
+    SharpHeaderAccent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    SharpHeaderAccent.BackgroundTransparency = 0.800
+    SharpHeaderAccent.BorderSizePixel = 0
+    SharpHeaderAccent.Position = UDim2.new(5.96046448e-08, 0, 0.0121890903, 0)
+    SharpHeaderAccent.Size = UDim2.new(0, 259, 0, 1)
+    SharpHeaderAccent.ZIndex = 99999999
+
+    Frame.Parent = InsideFrame
+    Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Frame.BackgroundTransparency = 1.000
+    Frame.Position = UDim2.new(0.0463320464, 0, 0.0447284356, 0)
+    Frame.Size = UDim2.new(0, 240, 0, 288)
+
+    UIListLayout.Parent = Frame
+    UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+    UIListLayout.Padding = UDim.new(0, 8)
+
+    local GamerLibrary = {}
+
+    function GamerLibrary:NewButton(name)
+        local TextButton = instance.New("TextButton")
+
+        TextButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+        TextButton.Size = UDim2.new(0, 235, 0, 28)
+        TextButton.AutoButtonColor = false
+        TextButton.Font = Enum.Font.SourceSans
+        TextButton.Text = "   Toggle"
+        TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+        TextButton.TextSize = 18.000
+        TextButton.TextXAlignment = Enum.TextXAlignment.Left
+    end
+
+    return GamerLibrary
+end
+
+return Library

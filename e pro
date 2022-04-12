@@ -81,7 +81,7 @@ function Library:CreateMain()
     local GamerLibrary = {}
 
     function GamerLibrary:NewButton(name)
-        local TextButton = instance.New("TextButton")
+        local TextButton = Instance.New("TextButton")
 
         TextButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
         TextButton.Size = UDim2.new(0, 235, 0, 28)
